@@ -1,4 +1,4 @@
-# Swing Speed (Fabric, Minecraft 1.21.4)
+# Swing Speed (Fabric, Minecraft 1.21.11)
 
 Client-side mod that changes how fast your arm swing animation plays.
 

@@ -7,6 +7,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class SwingSpeedClient implements ClientModInitializer {
@@ -21,7 +22,7 @@ public class SwingSpeedClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        String cat = "key.categories.swingspeed";
+        KeyBinding.Category cat = KeyBinding.Category.create(Identifier.of("swingspeed", "main"));
         faster = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.swingspeed.faster", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT_BRACKET, cat));
         slower = KeyBindingHelper.registerKeyBinding(new KeyBinding(
